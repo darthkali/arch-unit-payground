@@ -17,6 +17,7 @@ The project follows a hexagonal architecture approach:
   - Service: Implement business logic and application services.
   - Adapter: Manage communication with external systems.
 
+
 # Pizza Ordering System
 
 This repository contains the source code for a simple pizza ordering system.
@@ -41,6 +42,8 @@ The project follows a clean architecture approach, separating concerns into diff
 
 - **Domain:**
   - Define domain models.
+
+
 
 ## Usage
 

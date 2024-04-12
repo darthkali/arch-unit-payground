@@ -1,0 +1,67 @@
+@startuml
+'https://plantuml.com/class-diagram
+'scale 1024 width // 1024 pixels
+'scale 768 height // 768 pixels
+'left to right direction
+'top to bottom direction
+!theme carbon-gray
+!pragma useIntermediatePackages false
+
+package de.darthkali.archunitpayground{
+    package application{
+        package service {
+            class OrderPizzaService
+            class TrackOrderService
+            class CancelOrderService
+        }
+
+        package port{
+            package in {
+                interface OrderPizzaUseCase <<port>>
+                interface TrackOrderUseCase <<port>>
+                interface CancelOrderUseCase <<port>>
+            }
+
+            package out {
+                interface PizzaRepository <<port>>
+            }
+        }
+
+    }
+
+
+    package adapter{
+        package in {
+            class PizzaController <<adapter>>
+        }
+
+        package out {
+            class PostgresPizzaRepository <<adapter>>
+        }
+    }
+
+    package domain{
+        class Pizza
+        class Order
+    }
+}
+
+
+
+OrderPizzaService --> PizzaRepository
+TrackOrderService --> PizzaRepository
+CancelOrderService --> PizzaRepository
+
+OrderPizzaService ..|> OrderPizzaUseCase
+TrackOrderService ..|> TrackOrderUseCase
+CancelOrderService ..|> CancelOrderUseCase
+
+PizzaController --> OrderPizzaUseCase
+PizzaController --> TrackOrderUseCase
+PizzaController --> CancelOrderUseCase
+
+PostgresPizzaRepository ..|> PizzaRepository
+
+
+@enduml
+
