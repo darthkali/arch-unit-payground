@@ -20,11 +20,12 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
 
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
 
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation ("com.tngtech.archunit:archunit-junit5:1.2.1")
 }
 
