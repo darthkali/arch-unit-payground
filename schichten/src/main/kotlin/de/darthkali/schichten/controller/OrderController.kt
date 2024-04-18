@@ -1,8 +1,9 @@
 package de.darthkali.schichten.controller
 
+import de.darthkali.schichten.persistence.PizzaRepository
 import org.springframework.stereotype.Controller
 
-@Controller
+//@Controller
 class OrderController {
-    //val repo = PizzaRepository()
+    val repo = PizzaRepository()
 }

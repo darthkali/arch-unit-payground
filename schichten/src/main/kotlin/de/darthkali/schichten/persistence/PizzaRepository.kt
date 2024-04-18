@@ -1,12 +1,10 @@
 package de.darthkali.schichten.persistence
 
-import de.darthkali.schichten.Util.FachlicheArchiv
+import de.darthkali.schichten.controller.OrderController
 import org.springframework.stereotype.Repository
 
 @Repository
 class PizzaRepository {
 
-    fun savePizza(){
-        val fachlicheArchiv = FachlicheArchiv().save()
-    }
+    val order = OrderController()
 }

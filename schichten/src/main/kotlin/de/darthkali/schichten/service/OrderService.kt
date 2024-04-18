@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 class OrderService {
 
-    @Transactional
+//    @Transactional
     fun order(){
         println("keine Transaktion")
     }
