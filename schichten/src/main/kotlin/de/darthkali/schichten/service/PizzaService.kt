@@ -4,10 +4,9 @@ import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 @Service
+class PizzaServiceFalsch {
 
-class PizzaService {
-
-    @Transactional
+//    @Transactional
     fun pizza(){
         println("Pizza ist lecker")
     }
