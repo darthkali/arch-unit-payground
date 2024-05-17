@@ -1,6 +1,7 @@
 # ArchUnit Playground
 
 This repository contains a playground for ArchUnit with a simple pizza ordering system as an example.
+<span style="color:blue">MÜSSEN</span>
 
 ## Overview
 
